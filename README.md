@@ -1,6 +1,9 @@
 # 11-2018-EconomicExchange
 
-Business State Machine for Transactions
+Business State Machine for Transactions Version 3
+Proof of concept ( no FSA::Rules )
+
+MadMongers presentation Tues-13-Nov-2018
 
 Please review the mdp presentation EEFEE.mdp in
 https://github.com/MadMongers/10-2018-EconomicExchange
