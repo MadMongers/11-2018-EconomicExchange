@@ -104,7 +104,7 @@ sub _stEps {
      while (my (\$j,\$step) = each \@steps) {
        \$pos1 = \$j;
        if ((defined(\$step->[0])) and (\$step->[0] eq 'ASSERT')) {
-         say \$step->[0]; 
+#         say \$step->[0]; 
 	 \$rc = \$step->[1]();
          return if (not (\$rc));   # an ASSERT w/ FALSE return code, runaway
        }
