@@ -11,22 +11,28 @@ sub Location     { say 'Location ', "@_";     return 77;}
 sub Substitution { say 'Substitution'; return 55;}
 
 
-my @argz0 = (
-        [ 'ASSERT', \&Location,     [&bye(1), &bye(), &love(),], ],
-#        [ 'ASSERT', \Substitution,  [ bye(1),  bye(),  love(),], ],
-        [ 'ASSERT', \&Substitution, [ bye(1),  bye(),  love(),], ],
-);
 sub tester {
   my (@steps) = @_;
   my $y = $steps[0][1];
-  say $steps[0][0];
+#  say $steps[0][0];
   my $z =$steps[0][2];
   my $rc = $y->(@$z);
 
   return;
 }
 
-#tester(@argz0);
+sub wrapper {
+  if (0) { return; }
+
+  my @argz0 = (
+        [ 'ASSERT', \&Location,     [&bye(1), &bye(), &love(),], ],
+#        [ 'ASSERT', \Substitution,  [ bye(1),  bye(),  love(),], ],
+        [ 'ASSERT', \&Substitution, [ bye(1),  bye(),  love(),], ],
+  );
+#  tester(@argz0);
+}
+
+wrapper();
 
 exit 0;
 
